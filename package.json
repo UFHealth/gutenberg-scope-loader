@@ -1,0 +1,29 @@
+{
+  "name": "gutenberg-scope-loader",
+  "version": "1.0.0",
+  "description": "Automatically add WordPress Gutenberg editor scope to stylesheets",
+  "keywords": [
+    "css",
+    "postcss",
+    "webpack",
+    "webpack-loader",
+    "wordpress",
+    "gutenberg"
+  ],
+  "license": "MIT",
+  "author": "Kyle Tucker <k.tucker@ufl.edu>",
+  "homepage": "https://github.com/ufhealth/gutenberg-scope-loader",
+  "repository": "github:ufhealth/gutenberg-scope-loader.git",
+  "bugs": "https://github.com/ufhealth/gutenberg-scope-loader/issues",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {},
+  "engines": {
+    "node": ">=6.11.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}

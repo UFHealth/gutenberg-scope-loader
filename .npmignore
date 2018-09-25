@@ -5,3 +5,6 @@
 npm-debug.log
 yarn.lock
 yarn-error.log
+
+coverage
+node_modules

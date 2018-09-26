@@ -15,8 +15,8 @@ jobs:
       script: yarn run test
 
 after_success:
-  npm i coveralls
-  cat ./coverage/lcov.info | $(npm bin)/coveralls
+  - npm i coveralls
+  - cat ./coverage/lcov.info | $(npm bin)/coveralls
 
 notifications:
   email: false

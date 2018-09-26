@@ -1,5 +1,8 @@
 # [Gutenberg][gutenberg] Scope Loader
 
+[![Build Status](https://travis-ci.org/UFHealth/gutenberg-scope-loader.svg?branch=master)](https://travis-ci.org/UFHealth/gutenberg-scope-loader)
+[![Coverage Status](https://coveralls.io/repos/github/UFHealth/gutenberg-scope-loader/badge.svg)](https://coveralls.io/github/UFHealth/gutenberg-scope-loader)
+
 Automatically prefix selectors in any stylesheet with the Gutenberg editor's scope selector `.editor-block-list__block`. This allows you to write editor stylesheets without uber-specific selectors and not have to worry about specificity issues. It also allows your editor stylesheets to follow the same Webpack pipeline as your other stylesheets, so you can have nice things like hot-reloading.
 
 ## But, why?

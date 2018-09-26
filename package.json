@@ -1,5 +1,5 @@
 {
-  "name": "gutenberg-scope-loader",
+  "name": "@ufhealth/gutenberg-scope-loader",
   "version": "1.0.0",
   "description": "Automatically add WordPress Gutenberg editor scope to stylesheets",
   "keywords": [
@@ -13,12 +13,21 @@
   "license": "MIT",
   "author": "Kyle Tucker <k.tucker@ufl.edu>",
   "homepage": "https://github.com/ufhealth/gutenberg-scope-loader",
-  "repository": "github:ufhealth/gutenberg-scope-loader.git",
-  "bugs": "https://github.com/ufhealth/gutenberg-scope-loader/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ufhealth/gutenberg-scope-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ufhealth/gutenberg-scope-loader/issues"
+  },
   "main": "src/index.js",
   "files": [
     "src"
   ],
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
   "scripts": {
     "lint": "standard --env jest",
     "test": "jest --testEnvironment node --verbose --coverage --collectCoverageFrom=src/**/*.js"

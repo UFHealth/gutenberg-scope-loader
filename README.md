@@ -15,7 +15,7 @@ This loader leverages [postcss][postcss] within your build process to perform th
 
 Install:
 ```
-yarn add -D gutenberg-scope-loader
+yarn add -D @ufhealth/gutenberg-scope-loader
 ```
 
 Add to your Webpack config:
@@ -30,7 +30,7 @@ module.exports = {
         use: [
           'style-loader',
           {
-            loader: 'gutenberg-scope-loader',
+            loader: '@ufhealth/gutenberg-scope-loader',
             options: {
               files: [
                 /editor\.css$/

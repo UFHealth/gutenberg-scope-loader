@@ -25,7 +25,7 @@ const optionSchema = {
     },
     sourceMap: {
       type: 'boolean'
-    },
+    }
   }
 }
 
@@ -33,7 +33,7 @@ const loader = function (css, map, meta) {
   const loaderOptions = Object.assign({
     files: [],
     selector: '.editor-block-list__block',
-    sourceMap: false,
+    sourceMap: false
   }, getOptions(this))
   validateOptions(optionSchema, loaderOptions, LOADER_NAME)
 
@@ -90,7 +90,7 @@ const loader = function (css, map, meta) {
   postcss(plugins)
     .process(css, postcssOptions)
     .then(result => {
-      let { css, map, root, processor, messages } = result
+      let { css, map } = result
 
       map = map ? map.toJSON() : null
       if (map) {

@@ -15,7 +15,7 @@ const plugin = postcss.plugin('postcss-prepend-selector', (options) => {
     }
     css.walkRules((rule) => {
       rule.selectors = rule.selectors.map((selector) => {
-        if (/^([0-9]*[.])?[0-9]+\%$|^from$|^to$/.test(selector)) {
+        if (/^([0-9]*[.])?[0-9]+%$|^from$|^to$/.test(selector)) {
           // Skip keyframes
           return selector
         }

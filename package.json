@@ -20,7 +20,7 @@
     "src"
   ],
   "scripts": {
-    "lint": "standard",
+    "lint": "standard --env jest",
     "test": "jest --testEnvironment node --verbose --coverage --collectCoverageFrom=src/**/*.js"
   },
   "engines": {

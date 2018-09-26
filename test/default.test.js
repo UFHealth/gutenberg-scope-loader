@@ -1,4 +1,3 @@
-const fs = require('fs')
 const path = require('path')
 
 const sha = require('js-sha1')
@@ -34,11 +33,11 @@ const defaultConfig = (loaderOptions = {}) => {
           test: /\.css$/,
           use: [
             'css-loader',
-            getLoader(loaderOptions),
+            getLoader(loaderOptions)
           ]
-        },
-      ],
-    },
+        }
+      ]
+    }
   }
 }
 
@@ -58,11 +57,11 @@ const sourcemappedConfig = (loaderOptions = {}) => {
           test: /\.css$/,
           use: [
             { loader: 'css-loader', options: { sourceMap: true } },
-            getLoader(loaderOptions),
+            getLoader(loaderOptions)
           ]
-        },
-      ],
-    },
+        }
+      ]
+    }
   }
 }
 
@@ -103,12 +102,9 @@ test('appends scope selector', () => {
 })
 
 test('supports string or regex file patterns', () => {
-  const options = {
-    files: ['simple.css', /mult.*\.css/]
-  }
   return Promise.all([
     compile('simple.css', defaultConfig({ files: ['simple.css'] })),
-    compile('simple.css', defaultConfig({ files: [/simp.*\.css$/]})),
+    compile('simple.css', defaultConfig({ files: [/simp.*\.css$/] }))
   ]).then((results) => {
     expect(extractModuleOutput(results[0], 0)).toMatch(extractModuleOutput(results[1], 0))
   }, (err) => {
@@ -136,7 +132,7 @@ test('modifies sourcemaps', () => {
 
   return Promise.all([
     compile('multiple.css', _config({ sourceMap: false })),
-    compile('multiple.css', _config({ sourceMap: true })),
+    compile('multiple.css', _config({ sourceMap: true }))
   ]).then((results) => {
     const outputBefore = extractModuleOutput(results[0], 0)
     const outputAfter = extractModuleOutput(results[1], 0)
@@ -178,7 +174,7 @@ test('skips selectors if already prefixed', () => {
 
   return Promise.all([
     compile('prefixed.css', _config({})),
-    compile('prefixed.css', _config({ selector: '.custom' })),
+    compile('prefixed.css', _config({ selector: '.custom' }))
   ]).then((results) => {
     expect(extractModuleOutput(results[0], 0)).toMatch('".editor-block-list__block .custom-scope a.link { color: blue; }')
     expect(extractModuleOutput(results[1], 0)).toMatch('".custom-scope a.link { color: blue; }')

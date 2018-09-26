@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "lts/boron"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+jobs:
+  include:
+    - stage: lint
+      script: yarn run lint
+    - stage: test
+      script: yarn run test
+
+after_success:
+  npm i coveralls
+  cat ./coverage/lcov.info | $(npm bin)/coveralls
+
+notifications:
+  email: false

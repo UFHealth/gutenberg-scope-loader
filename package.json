@@ -1,6 +1,6 @@
 {
   "name": "@ufhealth/gutenberg-scope-loader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Automatically add WordPress Gutenberg editor scope to stylesheets",
   "keywords": [
     "css",
@@ -20,14 +20,10 @@
   "bugs": {
     "url": "https://github.com/ufhealth/gutenberg-scope-loader/issues"
   },
-  "main": "src/index.js",
+  "main": "index.js",
   "files": [
-    "src"
+    "src/"
   ],
-  "directories": {
-    "lib": "src",
-    "test": "test"
-  },
   "scripts": {
     "lint": "standard --env jest",
     "test": "jest --testEnvironment node --verbose --coverage --collectCoverageFrom=src/**/*.js"
